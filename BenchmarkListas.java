@@ -26,8 +26,8 @@ public class BenchmarkListas {
         long inicio = System.nanoTime();
         long suma = 0;
 
-        for (int i = 0; i < lista.size(); i++) {
-            suma += lista.get(i);
+        for (Integer valor : lista) {
+            suma += valor;
         }
 
         long fin = System.nanoTime();
