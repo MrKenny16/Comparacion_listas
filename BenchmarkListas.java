@@ -7,7 +7,7 @@ public class BenchmarkListas {
 
     public static void main(String[] args) {
 
-        System.out.println("--- 8. Benchmark de acceso ---");
+        System.out.println(" Benchmark de acceso");
         List<Integer> arrayListAcceso = new ArrayList<>();
         List<Integer> linkedListAcceso = new LinkedList<>();
         llenar(arrayListAcceso, N);
@@ -16,20 +16,19 @@ public class BenchmarkListas {
         medirAcceso("LinkedList", linkedListAcceso);
 
 
-        System.out.println("\n--- 9. Inserciones al inicio (50,000 elementos) ---");
+        System.out.println("\nInserciones al inicio (50,000 elementos)");
         medirInsercionInicio("ArrayList", new ArrayList<>());
         medirInsercionInicio("LinkedList", new LinkedList<>());
 
 
-        System.out.println("\n--- 10. Inserciones al final (100,000 elementos) ---");
+        System.out.println("\n Inserciones al final (100,000 elementos)");
         medirInsercionFinal("ArrayList", new ArrayList<>());
         medirInsercionFinal("LinkedList", new LinkedList<>());
 
 
-        System.out.println("\n--- 11. Eliminaciones al inicio (50,000 elementos) ---");
+        System.out.println("\n Eliminaciones al inicio (50,000 elementos)");
         List<Integer> arrayListEliminar = new ArrayList<>();
         List<Integer> linkedListEliminar = new LinkedList<>();
-
 
         llenar(arrayListEliminar, 50_000);
         llenar(linkedListEliminar, 50_000);
@@ -48,7 +47,6 @@ public class BenchmarkListas {
     private static void medirAcceso(String nombre, List<Integer> lista) {
         long inicio = System.nanoTime();
         long suma = 0;
-
 
         for (Integer valor : lista) {
             suma += valor;
